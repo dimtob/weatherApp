@@ -15,7 +15,7 @@ formSelector.addEventListener("submit",(event)=>{
     message1.textContent="loading...."
     message2.textContent=""
     var input=formInput.value
-    fetch("http://localhost:3000/weather?address="+encodeURIComponent(input)).then((response) => {
+    fetch("/weather?address="+encodeURIComponent(input)).then((response) => {
     return response.json().then((data) => {
         if (data.error) {
            

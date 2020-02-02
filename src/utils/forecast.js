@@ -5,7 +5,7 @@ var forecast=(latitude, longtitude, callback)=>{
     encodeURIComponent(longtitude)
     
      request({url:url1, json:true}, (error, response)=>{
-          console.log(response.headers) 
+          
         if (error){
              callback(error, undefined)
          }else if (response.body.error){
